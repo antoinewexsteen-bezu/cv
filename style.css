@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0f1f;
+  color: #e0e6f0;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #11172a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav h1 {
+  color: #00bcd4;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+nav ul li a {
+  color: #e0e6f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+.section {
+  padding: 3rem 10%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Études (Frise chronologique) */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #00bcd4;
+}
+.timeline li {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+.timeline .date {
+  position: absolute;
+  left: -70px;
+  top: 0;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/* Diplômes */
+.diplomes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.diplome-item {
+  background: #151d33;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #00bcd4;
+  border-radius: 8px;
+}
+.diplome-item span {
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+/* Langues (barres animées) */
+.langue {
+  margin-bottom: 1.5rem;
+}
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #1e2a4a;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.3rem;
+}
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00bcd4, #0080ff);
+  border-radius: 5px;
+  animation: grow 2s forwards;
+}
+@keyframes grow {
+  from { width: 0%; }
+  to { width: var(--level); }
+}
+
+.profil-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.profil-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+}
+.skill-card {
+  background-color: #151d33;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  transition: transform 0.3s;
+}
+.skill-card:hover {
+  transform: scale(1.03);
+}
+footer {
+  background-color: #11172a;
+  text-align: center;
+  padding: 1rem;
+  color: #8a96b5;
+}
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
