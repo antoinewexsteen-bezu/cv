@@ -224,3 +224,40 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.certifications-table-container {
+  overflow-x: auto;
+}
+
+.certifications-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #151d33;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.certifications-table thead {
+  background-color: #00bcd4;
+  color: #0a0f1f;
+}
+
+.certifications-table th,
+.certifications-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #1a2340;
+}
+
+.certifications-table tbody tr:hover {
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+.certifications-table th {
+  font-weight: 600;
+}
+
+a {
+  color: #e0e6f0;
+}
+
