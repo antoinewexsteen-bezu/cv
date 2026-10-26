@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head><script src="portfolio-demo.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d14">
+  <title>Facture — Weazel News</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="facture.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Accueil Weazel News">
+      <span class="brand-logo" aria-hidden="true"><img src="weazel-news-logo.png" alt=""></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Agenda</a>
+      <a class="active" href="facture.html">Facture</a>
+      
+      
+    </nav>
+    <div class="auth-actions"><span data-user-name>Discord</span><button type="button" data-logout>Déconnexion</button></div>
+  </header>
+
+  <main class="invoice-main">
+    <section class="invoice-hero">
+      <div>
+        <p class="eyebrow">OUTIL DE FACTURATION</p>
+        <h1>Créer une <em>facture.</em></h1>
+        <p class="intro">Renseignez le client, ajoutez les prestations puis téléchargez une facture PNG prête à transmettre.</p>
+      </div>
+      <div class="invoice-number-card"><small>PROCHAINE FACTURE</small><strong id="invoice-number">N° —</strong></div>
+    </section>
+
+    <form id="invoice-form" class="invoice-form">
+      <section class="form-panel">
+        <div class="form-panel-title"><span>01</span><div><p>INFORMATIONS</p><h2>Client & règlement</h2></div></div>
+        <div class="field-grid">
+          <label>Nom du client<input id="client-name" required placeholder="Ex. Pedrito Alvarez"></label>
+          <label>Entité représentée<input id="client-company" required placeholder="Ex. Burger Shot"></label>
+          <label>Date de facturation<input id="invoice-date" type="date" required></label>
+          <label>Date de paiement<input id="payment-date" type="date" required></label>
+          <label class="wide">Modalité de paiement
+            <select id="payment-method" required>
+              <option value="Espèce">Espèce</option>
+              <option value="Facture personnel">Facture personnel</option>
+              <option value="Facture entreprise">Facture entreprise</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-panel-title"><span>02</span><div><p>PRESTATIONS</p><h2>Articles de la facture</h2></div></div>
+        <div class="cashier-toolbar"><label>Rechercher une prestation<input id="product-search" type="search" placeholder="Annonce, panneau, vidéo…"></label><div id="category-filters" class="category-filters"></div></div>
+        <div id="product-catalog" class="product-catalog"></div>
+        <div class="line-list" id="line-list"><p class="empty-lines">Aucun article ajouté.</p></div>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-panel-title"><span>03</span><div><p>FINALISATION</p><h2>Réduction & signature</h2></div></div>
+        <div class="field-grid">
+          <label>Réduction personnalisée (%)<input id="discount" type="number" min="0" max="100" step="1" value="0"></label>
+          <label>Réduction enregistrée<select id="discount-preset"></select></label>
+          <label>Signature du vendeur<input id="signature" type="file" accept="image/png,image/jpeg,image/webp"></label>
+        </div>
+        <div class="signature-preview" id="signature-preview">Aperçu de la signature</div>
+      </section>
+
+      <aside class="invoice-summary">
+        <div><span>Sous-total</span><strong id="subtotal">0 $</strong></div>
+        <div><span id="discount-label">Réduction</span><strong id="discount-amount">0 $</strong></div>
+        <div class="grand-total"><span>Total</span><strong id="grand-total">0 $</strong></div>
+        <p id="form-message" role="status"></p>
+        <button class="download-button" id="download-invoice" type="submit">Télécharger la facture PNG</button>
+      </aside>
+    </form>
+  </main>
+  <footer><span>WEAZEL NEWS</span><p>Facturation interne · Calcul automatique</p><span>SERVICE COMMERCIAL</span></footer>
+  
+  <script src="facture.js" defer></script>
+<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#102039;color:#eaf2ff;font:11px/1.5 Arial;padding:8px 15px;border-top:1px solid #557099">PORTFOLIO · Interface originale · Démonstration locale · Aucune action sur le service réel</div></body>
+</html>

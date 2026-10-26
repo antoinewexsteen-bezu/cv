@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+  <head><script src="portfolio-demo.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panneau Publicitaire | Weazel News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260820-mobile-form" />
+  </head>
+  <body>
+    <canvas id="neural-canvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div><div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Accueil Weazel News"><img class="brand-logo" src="assets/weazel-logo-white.png" alt="Weazel News" /></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <div class="nav-dropdown"><button class="nav-trigger active-trigger" type="button" aria-expanded="false">Notre Catalogue</button><div class="dropdown-menu">
+          <a href="annonce-publicitaire.html">Annonce Publicitaire</a><a href="panneau-publicitaire.html">Panneau Publicitaire</a><a href="article.html">Article</a><a href="video-publicitaire.html">Video Publicitaire</a><a href="carte-entreprise.html">Carte Entreprise</a><a href="shooting-photo.html">Shooting Photo</a>
+        </div></div>
+        <a href="conditions-generales-de-vente.html">CGV</a>
+        <a href="recrutement.html">Ce faire recruter</a>
+        <a class="nav-radio" href="https://discord.gg/R3Hmfq5Auu" target="_blank" rel="noopener noreferrer">Notre Radio D</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow reveal">Notre Catalogue</p>
+        <h1 class="reveal">Panneau Publicitaire</h1>
+        <p class="hero-lead reveal">Installez votre marque sur les emplacements les plus visibles de la ville avec des panneaux grand format.</p>
+      </section>
+
+      <section class="section billboard-section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Affichage premium</p>
+          <h2>Nos emplacements disponibles</h2>
+        </div>
+
+        <div class="billboard-grid">
+          <article class="billboard-card feature reveal">
+            <div class="billboard-copy">
+              <span>Vue panoramique</span>
+              <h3>Building avec vue panoramique</h3>
+              <p><strong>Tarif :</strong> 10.000.000 $ / semaine / publicite</p>
+              <ul>
+                <li>Exclusivite du panneau : + 7.500.000 $ / semaine</li>
+                <li>Ce panneau peut accueillir jusqu'a 2 publicites.</li>
+                <li><strong>Prix total semaine avec exclusivite :</strong> 27.500.000 $</li>
+              </ul>
+              <p class="billboard-extra"><strong>Supplement :</strong> design/image non fournie : 1.000.000 $</p>
+            </div>
+            <img src="assets/panneau-building-panoramique.png" alt="Exemple panneau building avec vue panoramique" />
+          </article>
+
+          <article class="billboard-card reveal">
+            <img src="assets/panneau-magasins-populaires.png" alt="Exemple panneaux magasins populaires" />
+            <div class="billboard-copy">
+              <span>Magasins populaires</span>
+              <h3>Panneaux magasins populaires</h3>
+              <p><strong>Tarif :</strong> 2.000.000 $ / semaine / publicite</p>
+              <ul>
+                <li>Exclusivite des 3 panneaux : + 5.000.000 $ / semaine / panneaux</li>
+                <li>Cette zone comprend 3 panneaux, permettant l'affichage de 6 publicites.</li>
+                <li><strong>Prix total semaine avec exclusivite :</strong> 27.000.000 $</li>
+              </ul>
+              <p class="billboard-extra"><strong>Supplement :</strong> design/image non fournie : 1.000.000 $</p>
+            </div>
+          </article>
+
+          <article class="billboard-card reveal">
+            <div class="billboard-copy">
+              <span>Parking rouge</span>
+              <h3>Panneaux parking rouge</h3>
+              <p><strong>Tarif :</strong> 5.000.000 $ / semaine / publicite</p>
+              <ul>
+                <li>Exclusivite du panneau : + 8.000.000 $ / semaine</li>
+                <li>Ce panneau peut accueillir jusqu'a 2 publicites.</li>
+                <li><strong>Prix total semaine avec exclusivite :</strong> 18.000.000 $</li>
+              </ul>
+              <p class="billboard-extra"><strong>Supplement :</strong> design/image non fournie : 1.000.000 $</p>
+            </div>
+            <img src="assets/panneau-parking-rouge.png" alt="Exemple panneau parking rouge" />
+          </article>
+
+          <article class="billboard-card reveal">
+            <img src="assets/panneau-batiment-construction.png" alt="Exemple panneau batiment en construction" />
+            <div class="billboard-copy">
+              <span>Construction</span>
+              <h3>Batiment en construction</h3>
+              <p><strong>Tarif :</strong> 5.000.000 $ / semaine</p>
+              <ul>
+                <li>Le tarif comprend l'exclusivite du panneau.</li>
+                <li>Seulement 1 publicite peut etre affichee.</li>
+              </ul>
+              <p class="billboard-extra"><strong>Supplement :</strong> design/image non fournie : 1.000.000 $</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="terms-note billboard-terms reveal"><strong>Avant toute location,</strong> merci de vous referer aux <a href="conditions-generales-de-vente.html">conditions generales de vente</a>.</p>
+      </section>
+    </main>
+    <footer><strong>Weazel News</strong><span>Journalisme, publicite, emissions, directs et reportages.</span></footer><script src="script.js"></script>
+  <div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#102039;color:#eaf2ff;font:11px/1.5 Arial;padding:8px 15px;border-top:1px solid #557099">PORTFOLIO · Interface originale · Démonstration locale · Aucune action sur le service réel</div></body>
+</html>

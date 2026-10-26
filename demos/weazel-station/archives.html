@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr">
+<head><script src="portfolio-demo.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archives - Weazel News</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="archives.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-logo"><img src="weazel-news-logo.png" alt="Weazel News"></span></a><nav class="main-nav"><a href="index.html">Planning</a><a class="active" href="archives.html">Archives</a><a href="facture.html">Factures</a></nav><div class="auth-actions"><span data-user-name>Discord</span><button type="button" data-logout>Déconnexion</button></div></header>
+<main class="archives-main">
+<div class="archive-heading"><h1>Archives</h1><button id="new-archive" class="primary-button"><i data-lucide="plus"></i> Nouvelle archive</button></div>
+<div class="archive-tabs" role="tablist" aria-label="Catégories"><button role="tab" aria-selected="true" data-type="announcement">Annonces</button><button role="tab" aria-selected="false" data-type="panel">Panneaux</button></div>
+<div id="archive-panels" class="archive-tabs panel-tabs" role="tablist" aria-label="Panneaux" hidden></div>
+<div class="archive-toolbar"><label>Recherche<input id="archive-search" type="search" placeholder="Entreprise ou titre"></label><span id="archive-count"></span></div>
+<p id="archive-error" class="form-error" role="alert"></p><p id="archive-status" role="status" aria-live="polite"></p><section id="archive-list" aria-live="polite"></section>
+</main>
+<dialog id="archive-modal"><form id="archive-form"><div class="modal-head"><h2 id="archive-modal-title">Nouvelle archive</h2><button type="button" class="archive-close" aria-label="Fermer">×</button></div><input id="archive-id" type="hidden"><div class="form-grid"><label>Entreprise<input id="archive-company" maxlength="100" required></label><label>Catégorie<select id="archive-type"><option value="announcement">Annonce</option><option value="panel">Panneau</option></select></label><label id="archive-panel-field" hidden>Panneau<select id="archive-panel"></select></label></div>
+<label>Titre<input id="archive-title" maxlength="140" required></label><label>Sous-titre<input id="archive-subtitle" maxlength="300"></label><label>Texte<textarea id="archive-text" maxlength="8000" rows="5"></textarea></label><label>Lien image imgbb<input id="archive-imageUrl" type="url" maxlength="2048" placeholder="https://i.ibb.co/..."></label><label>Image<input id="archive-file" type="file" accept="image/jpeg,image/png,image/gif,image/webp"></label><p id="upload-status" role="status" aria-live="polite"></p><img id="archive-image-preview" class="archive-preview" alt="Visuel de l’archive" hidden>
+<p id="archive-form-error" class="form-error" role="alert"></p><div class="modal-actions"><button id="delete-archive" type="button" class="danger-button" hidden>Supprimer</button><span></span><button type="button" class="archive-close text-button">Annuler</button><button type="submit" class="primary-button">Enregistrer</button></div></form></dialog>
+<script src="publication-content.js" defer></script><script src="archives.js" defer></script>
+<div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#102039;color:#eaf2ff;font:11px/1.5 Arial;padding:8px 15px;border-top:1px solid #557099">PORTFOLIO · Interface originale · Démonstration locale · Aucune action sur le service réel</div></body></html>

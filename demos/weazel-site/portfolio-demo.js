@@ -1,0 +1,4 @@
+/* Keep the public site's original UI; disable live account and network actions. */
+window.fetch=async(url)=>{const path=String(url);if(path.includes('/api/loto'))return new Response(JSON.stringify({currentPrize:'Lot fictif · démonstration',winningNumber:'—',published:false}),{status:200,headers:{'Content-Type':'application/json'}});return new Response(JSON.stringify({error:'Service externe désactivé dans cet aperçu.'}),{status:401,headers:{'Content-Type':'application/json'}})};
+document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const href=a.getAttribute('href')||'';if(/^https?:|^\/auth|^\/api|^mailto:/.test(href)){e.preventDefault();alert('La connexion et les liens externes sont désactivés dans cet aperçu du portfolio.')}});
+document.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation();alert('Formulaire de démonstration : aucune demande n’est envoyée.');},true);

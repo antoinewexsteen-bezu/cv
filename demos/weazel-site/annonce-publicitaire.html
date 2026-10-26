@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+  <head><script src="portfolio-demo.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Annonce Publicitaire | Weazel News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260820-mobile-form" />
+  </head>
+  <body>
+    <canvas id="neural-canvas" aria-hidden="true"></canvas><div class="noise" aria-hidden="true"></div><div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Accueil Weazel News"><img class="brand-logo" src="assets/weazel-logo-white.png" alt="Weazel News" /></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <div class="nav-dropdown"><button class="nav-trigger active-trigger" type="button" aria-expanded="false">Notre Catalogue</button><div class="dropdown-menu">
+          <a href="annonce-publicitaire.html">Annonce Publicitaire</a><a href="panneau-publicitaire.html">Panneau Publicitaire</a><a href="article.html">Article</a><a href="video-publicitaire.html">Video Publicitaire</a><a href="carte-entreprise.html">Carte Entreprise</a><a href="shooting-photo.html">Shooting Photo</a>
+        </div></div>
+        <a href="conditions-generales-de-vente.html">CGV</a>
+        <a href="recrutement.html">Ce faire recruter</a>
+        <a class="nav-radio" href="https://discord.gg/R3Hmfq5Auu" target="_blank" rel="noopener noreferrer">Notre Radio D</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow reveal">Notre Catalogue</p>
+        <h1 class="reveal">Annonces Publicitaires</h1>
+        <p class="hero-lead reveal">
+          Ce service permet d'afficher a tout les citoyens present en ville de
+          voir votre/vos annonces.
+        </p>
+      </section>
+      <section class="section ad-offer">
+        <article class="detail-card ad-pricing reveal">
+          <span>Tarifs</span>
+          <h2>Diffusion publicitaire</h2>
+          <ul class="price-list">
+            <li><strong>1 Annonce :</strong> $2,000,000</li>
+            <li><strong>2 Annonces :</strong> $4,000,000</li>
+            <li><strong>5 Annonces :</strong> $8,500,000</li>
+          </ul>
+          <p class="extra-price">
+            <strong>Supplement :</strong> Design/Image non fournie : 1 000 000 $
+          </p>
+          <p class="terms-note">
+            <strong>Avant toute location,</strong> merci de vous referer aux
+            <a href="conditions-generales-de-vente.html">conditions generales de vente</a>.
+        </p>
+          <a class="button primary" href="index.html#contact">Commander cette prestation</a>
+        </article>
+
+        <aside class="ad-example reveal" aria-label="Exemple d'annonce publicitaire">
+          <p class="eyebrow">Image d'exemple</p>
+          <img
+            src="assets/exemple-annonce-publicitaire.png"
+            alt="Exemple d'annonce publicitaire Weazel News"
+          />
+        </aside>
+      </section>
+
+      <section class="section ad-simulator-section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Simulation</p>
+          <h2>Creer une annonce</h2>
+        </div>
+        <div class="ad-simulator">
+          <form class="detail-card ad-builder reveal" id="ad-builder">
+            <label>
+              Titre de l'annonce
+              <input
+                id="ad-title"
+                maxlength="30"
+                type="text"
+                placeholder="Ex: COURSE DE TROTINETTE"
+              />
+              <small><span id="ad-title-count">0</span>/30 caracteres</small>
+            </label>
+            <label>
+              Texte du milieu
+              <textarea
+                id="ad-text"
+                rows="6"
+                dir="ltr"
+                placeholder="Ex: Venez participer a une course de trotinette... 🔥"
+              ></textarea>
+              <small><span id="ad-text-count">0</span> caracteres. Emojis et sauts de ligne acceptes.</small>
+            </label>
+            <label>
+              Lien d'image
+              <input
+                id="ad-image-url"
+                type="url"
+                inputmode="url"
+                placeholder="https://exemple.com/image.png"
+              />
+              <small>Collez un lien direct vers une image.</small>
+            </label>
+            <label>
+              Importer une image
+              <input id="ad-image-file" type="file" accept="image/*" />
+              <small>Ou importez une image depuis votre appareil. Format affiche en 400x220 px dans l'aperçu.</small>
+            </label>
+          </form>
+
+          <aside class="ad-preview-panel reveal" aria-label="Apercu de votre annonce">
+            <p class="eyebrow">Image 400x220</p>
+            <div class="ad-preview" id="ad-preview">
+              <button class="ad-preview-close" type="button" aria-label="Fermer l'aperçu"></button>
+              <div class="ad-preview-content">
+                <h3 id="ad-preview-title"></h3>
+                <div class="ad-preview-rule" aria-hidden="true"></div>
+                <p id="ad-preview-text"></p>
+              </div>
+              <div class="ad-preview-media">
+                <img
+                  id="ad-preview-image"
+                  alt="Apercu image annonce"
+                  hidden
+                />
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer><strong>Weazel News</strong><span>Journalisme, publicite, emissions, directs et reportages.</span></footer><script src="script.js"></script>
+  <div style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#102039;color:#eaf2ff;font:11px/1.5 Arial;padding:8px 15px;border-top:1px solid #557099">PORTFOLIO · Interface originale · Démonstration locale · Aucune action sur le service réel</div></body>
+</html>
